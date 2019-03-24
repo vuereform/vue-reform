@@ -26,18 +26,23 @@
     "tslint-check": "tslint-config-prettier-check ./tslint.json",
     "test": "jest --coverage",
     "test:watch": "jest --watchAll",
-    "test:unit": "vue-cli-service test:unit"
+    "storybook": "start-storybook"
   },
   "dependencies": {
     "vue": "^2.6.6"
   },
   "devDependencies": {
     "@types/jest": "^23.1.4",
+    "@types/storybook__vue": "^5.0.0",
+    "@storybook/addon-info": "^5.0.3",
+    "@storybook/cli": "^5.0.3",
     "@vue/cli-plugin-babel": "^3.5.0",
     "@vue/cli-plugin-e2e-cypress": "^3.5.0",
     "@vue/cli-plugin-typescript": "^3.5.0",
     "@vue/cli-plugin-unit-jest": "^3.5.0",
     "@vue/cli-service": "^3.5.0",
+    "@storybook/vue": "^5.0.3",
+    "fork-ts-checker-webpack-plugin": "^1.0.0",
     "@vue/test-utils": "1.0.0-beta.29",
     "babel-core": "^6.26.3",
     "babel-preset-vue": "^2.0.2",
