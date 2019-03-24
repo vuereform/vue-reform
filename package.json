@@ -21,7 +21,9 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
+    "lint": "tslint --project .",
+    "lintfix": "tslint --fix --project .",
+    "tslint-check": "tslint-config-prettier-check ./tslint.json",
     "test": "jest --coverage",
     "test:watch": "jest --watchAll",
     "test:unit": "vue-cli-service test:unit"
