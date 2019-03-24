@@ -5,9 +5,12 @@ node_modules
 /tests/e2e/videos/
 /tests/e2e/screenshots/
 
+reports/
+
 # local env files
 .env.local
 .env.*.local
+junit.xml
 
 # Log files
 npm-debug.log*

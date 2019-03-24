@@ -25,9 +25,6 @@ module.exports = {
     '**/tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)'
   ],
   testURL: 'http://localhost/',
-  globals: {
-    'ts-jest': {
-      babelConfig: true
-    }
-  }
+  "coverageDirectory": "<rootDir>/reports/junit",
+  "reporters": ['default', 'jest-junit']
 }
