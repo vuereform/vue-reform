@@ -1,7 +1,23 @@
 {
   "name": "vue-reform",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "author": "Les Harris <les@lesharris.com>",
+  "description": "Build and render forms with Vue Reform",
+  "license": "MIT",
+  "homepage": "https://vuereform.dev",
+  "bugs": {
+    "url": "https://github.com/lesharris/vue-reform/issues"
+  },
+  "keywords": [
+    "vue",
+    "forms",
+    "json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lesharris/vue-reform.git"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -10,9 +26,7 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
-    "vue": "^2.6.6",
-    "vue-class-component": "^6.0.0",
-    "vue-property-decorator": "^7.0.0"
+    "vue": "^2.6.6"
   },
   "devDependencies": {
     "@types/jest": "^23.1.4",
@@ -27,7 +41,12 @@
     "sass": "^1.17.2",
     "sass-loader": "^7.1.0",
     "ts-jest": "^23.0.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1",
     "typescript": "^3.2.1",
-    "vue-template-compiler": "^2.5.21"
+    "typescript-tslint-plugin": "^0.3.1",
+    "vue-template-compiler": "^2.5.21",
+    "vue-class-component": "^6.0.0",
+    "vue-property-decorator": "^7.0.0"
   }
 }
