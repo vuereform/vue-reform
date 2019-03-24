@@ -1,19 +1,66 @@
 {
   "defaultSeverity": "warning",
   "extends": [
-    "tslint:recommended"
+    "tslint:latest",
+    "tslint-config-prettier"
   ],
-  "linterOptions": {
-    "exclude": [
-      "node_modules/**"
+  "rulesDirectory": [
+    "tslint-plugin-prettier"
+  ],
+  "jsRules": {
+    "object-literal-sort-keys": false,
+    "ordered-imports": false,
+    "no-console": false,
+    "no-shadowed-variable": false,
+    "no-empty": [
+      true,
+      "allow-empty-functions"
+    ],
+    "curly": [
+      true,
+      "ignore-same-line"
     ]
   },
   "rules": {
-    "quotemark": [true, "single"],
-    "indent": [true, "spaces", 2],
+    "prettier": true,
+    "member-access": [
+      true,
+      "no-public"
+    ],
+    "variable-name": [
+      true,
+      "allow-leading-underscore"
+    ],
     "interface-name": false,
-    "ordered-imports": false,
     "object-literal-sort-keys": false,
-    "no-consecutive-blank-lines": false
+    "ordered-imports": false,
+    "no-console": false,
+    "no-submodule-imports": false,
+    "no-shadowed-variable": false,
+    "no-implicit-dependencies": [
+      true,
+      [
+        "types",
+        "static",
+        "~"
+      ]
+    ],
+    "no-empty": [
+      true,
+      "allow-empty-functions"
+    ],
+    "curly": [
+      true,
+      "ignore-same-line"
+    ],
+    "no-bitwise": false
+  },
+  "linterOptions": {
+    "exclude": [
+      "node_modules/**",
+      "dist/**",
+      "dist.js/**",
+      "tests/**",
+    ]
   }
 }

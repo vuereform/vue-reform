@@ -20,6 +20,12 @@
         "src/*"
       ]
     },
+    "plugins": [
+      {
+        "name": "typescript-tslint-plugin",
+        "configFile": "./tslint.json"
+      }
+    ],
     "lib": [
       "esnext",
       "dom",
