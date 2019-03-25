@@ -9,11 +9,20 @@
     "experimentalDecorators": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
     "sourceMap": true,
+    "allowJs": true,
     "baseUrl": ".",
     "types": [
+      "vue-tsx-support/enable-check",
       "webpack-env",
       "jest"
+    ],
+    "plugins": [
+      {
+        "name": "typescript-tslint-plugin",
+        "configFile": "./tslint.json"
+      }
     ],
     "paths": {
       "@/*": [

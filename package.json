@@ -1,0 +1,56 @@
+{
+  "name": "vue-reform",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Build and render forms with Vue Reform",
+  "author": "Les Harris <les@lesharris.com>",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "test:e2e": "vue-cli-service test:e2e",
+    "test:unit": "vue-cli-service test:unit"
+  },
+  "dependencies": {
+    "vue": "2.6.10",
+    "vue-class-component": "7.0.1",
+    "vue-property-decorator": "8.1.0",
+    "vue-tsx-support": "2.2.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.1.4",
+    "@vue/cli-plugin-babel": "3.5.1",
+    "@vue/cli-plugin-e2e-cypress": "3.5.1",
+    "@vue/cli-plugin-typescript": "3.5.1",
+    "@vue/cli-plugin-unit-jest": "3.5.1",
+    "@vue/cli-service": "3.5.1",
+    "@vue/test-utils": "^1.0.0-beta.29",
+    "babel-core": "7.0.0-bridge.0",
+    "fibers": "^3.1.1",
+    "prettier": "^1.16.4",
+    "sass": "^1.17.2",
+    "sass-loader": "^7.1.0",
+    "ts-jest": "^23.0.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "typescript": "^3.2.1",
+    "typescript-tslint-plugin": "^0.3.1",
+    "vue-cli-plugin-tsx-support": "^0.3.0",
+    "vue-jsx-hot-loader": "^1.4.0",
+    "vue-template-compiler": "2.6.10"
+  },
+  "bugs": {
+    "url": "https://github.com/lesharris/vue-reform/issues"
+  },
+  "homepage": "https://vuereform.dev",
+  "keywords": [
+    "vue",
+    "forms",
+    "json"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lesharris/vue-reform.git"
+  }
+}

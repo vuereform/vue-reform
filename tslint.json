@@ -1,19 +1,56 @@
 {
   "defaultSeverity": "warning",
   "extends": [
-    "tslint:recommended"
+    "tslint:latest",
+    "tslint-config-prettier"
+  ],
+  "rulesDirectory": [
+    "tslint-plugin-prettier"
   ],
   "linterOptions": {
     "exclude": [
       "node_modules/**"
     ]
   },
-  "rules": {
-    "quotemark": [true, "single"],
-    "indent": [true, "spaces", 2],
-    "interface-name": false,
-    "ordered-imports": false,
+  "jsRules": {
     "object-literal-sort-keys": false,
-    "no-consecutive-blank-lines": false
+    "ordered-imports": false,
+    "no-console": false,
+    "no-shadowed-variable": false,
+    "no-empty": [
+      true,
+      "allow-empty-functions"
+    ],
+    "curly": [
+      true,
+      "ignore-same-line"
+    ]
+  },
+  "rules": {
+    "prettier": true,
+    "member-access": [
+      true,
+      "no-public"
+    ],
+    "variable-name": [
+      true,
+      "allow-leading-underscore"
+    ],
+    "interface-name": false,
+    "object-literal-sort-keys": false,
+    "ordered-imports": false,
+    "no-console": false,
+    "no-submodule-imports": false,
+    "no-shadowed-variable": false,
+    "no-implicit-dependencies": false,
+    "no-empty": [
+      true,
+      "allow-empty-functions"
+    ],
+    "curly": [
+      true,
+      "ignore-same-line"
+    ],
+    "no-bitwise": false
   }
 }

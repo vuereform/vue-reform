@@ -1,4 +1,14 @@
-enum VueReformElementTypes {
+export type TextElement<T extends any> = T & {
+  placeholder: string
+  value: any
+}
+
+export type TextareaElement<T extends any> = T & {
+  placeholder: string
+  value: any
+}
+
+export enum ElementTypes {
   text = 'text',
   textarea = 'textarea',
   checkboxes = 'checkboxes',
@@ -10,30 +20,30 @@ enum VueReformElementTypes {
   header = 'header'
 }
 
-enum VueReformContainerTypes {
+export enum ContainerTypes {
   section = 'section',
   group = 'group'
 }
 
-interface VueReformElement {
+export interface Element {
   name: string
   label: string
-  type: VueReformElementTypes
+  type: ElementTypes
 }
 
-interface VueReformContainer {
+export interface Container {
   name: string
   label: string
-  type: VueReformContainerTypes
-  elements: VueReformElement[]
+  type: ContainerTypes
+  elements: Array<TextElement<Element> | TextareaElement<Element>>
 }
 
-interface VueReformForm {
+export interface Form {
   name: string
   label: string
-  containers: VueReformContainer[]
+  containers: Container[]
 }
 
-interface VueReformRenderable {
+export interface Renderable {
   render(): void
 }
