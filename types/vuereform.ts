@@ -7,33 +7,33 @@ enum VueReformElementTypes {
   date = 'date',
   time = 'time',
   select = 'select',
-  header = 'header'
+  header = 'header',
 }
 
 enum VueReformContainerTypes {
   section = 'section',
-  group = 'group'
+  group = 'group',
 }
 
 interface VueReformElement {
-  name: string
-  label: string
-  type: VueReformElementTypes
+  name: string;
+  label: string;
+  type: VueReformElementTypes;
 }
 
 interface VueReformContainer {
-  name: string
-  label: string
-  type: VueReformContainerTypes
-  elements: VueReformElement[]
+  name: string;
+  label: string;
+  type: VueReformContainerTypes;
+  elements: VueReformElement[];
 }
 
 interface VueReformForm {
-  name: string
-  label: string
-  containers: VueReformContainer[]
+  name: string;
+  label: string;
+  containers: VueReformContainer[];
 }
 
 interface VueReformRenderable {
-  render(): void
+  render(): void;
 }
