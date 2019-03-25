@@ -25,6 +25,13 @@
     <img src="https://www.codefactor.io/repository/github/lesharris/vue-reform/badge"
       alt="Code Style Checks" />
   </a>
+
+  <a href="https://github.com/lesharris/vue-reform">
+    <img
+      alt="GitHub"
+      src="https://img.shields.io/github/license/lesharris/vue-reform.svg"
+    >
+  </a>
 </div>
 
 <div align="center">
