@@ -1,12 +1,9 @@
 import { shallowMount } from '@vue/test-utils';
-import HelloWorld from '@/components/HelloWorld.vue';
+import VueReform from '../../src/components/VueReform/VueReform';
 
-describe('HelloWorld.vue', () => {
-  it('renders props.msg when passed', () => {
-    const msg = 'new message';
-    const wrapper = shallowMount(HelloWorld, {
-      propsData: { msg },
-    });
-    expect(wrapper.text()).toMatch(msg);
-  });
-});
+describe('VueReform.tsx', () => {
+  it('is a vue component', () => {
+    const wrapper = shallowMount(VueReform, {})
+    expect(wrapper.isVueInstance()).toBe(true)
+  })
+})

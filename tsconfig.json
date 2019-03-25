@@ -12,12 +12,16 @@
     "sourceMap": true,
     "baseUrl": ".",
     "types": [
+      "vue-tsx-support/enable-check",
       "@types/webpack-env",
       "@types/jest"
     ],
     "paths": {
+      "~/*": [
+        "./*"
+      ],
       "@/*": [
-        "src/*"
+        "./*"
       ]
     },
     "plugins": [
