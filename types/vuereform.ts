@@ -1,3 +1,9 @@
+export interface Element {
+  name: string
+  label: string
+  type: ElementTypes
+}
+
 export type TextElement<T extends any> = T & {
   placeholder: string
   value: any
@@ -7,6 +13,8 @@ export type TextareaElement<T extends any> = T & {
   placeholder: string
   value: any
 }
+
+export type FormElement = TextElement<Element> | TextareaElement<Element>
 
 export enum ElementTypes {
   text = 'text',
@@ -25,17 +33,11 @@ export enum ContainerTypes {
   group = 'group'
 }
 
-export interface Element {
-  name: string
-  label: string
-  type: ElementTypes
-}
-
 export interface Container {
   name: string
   label: string
   type: ContainerTypes
-  elements: Array<TextElement<Element> | TextareaElement<Element>>
+  elements: FormElement[]
 }
 
 export interface Form {
