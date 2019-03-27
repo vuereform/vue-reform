@@ -924,7 +924,7 @@
     error-stack-parser "^2.0.0"
     string-width "^2.0.0"
 
-"@storybook/addon-info@^5.0.3":
+"@storybook/addon-info@5.0.5":
   version "5.0.5"
   resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-5.0.5.tgz#6b2e4ed0d92481a0e8c21c64d4124e354fd75cfd"
   integrity sha512-myWiFGgHXBeIt5K1Znq7UyjPjhxfjT/33g3Jrwp9EBT6rCY0evYuQiUjAxKzXCDMfU+d5IvqobzvdaiqETpDxQ==
@@ -974,7 +974,7 @@
   dependencies:
     core-js "^2.6.5"
 
-"@storybook/cli@^5.0.3":
+"@storybook/cli@5.0.5":
   version "5.0.5"
   resolved "https://registry.yarnpkg.com/@storybook/cli/-/cli-5.0.5.tgz#878c2d10684238c65d2c4273426dd5c74abaf05a"
   integrity sha512-tyc21E3uk6+nz87w8nUywIcKPA/ei32xAhjAIMhV4z/g51eiwJFWFwkMe+1mmPdcb6Zw6Dk94kRC+/ouIh+3sA==
@@ -1227,7 +1227,7 @@
     telejson "^2.1.1"
     util-deprecate "^1.0.2"
 
-"@storybook/vue@^5.0.3":
+"@storybook/vue@5.0.5":
   version "5.0.5"
   resolved "https://registry.yarnpkg.com/@storybook/vue/-/vue-5.0.5.tgz#b8e855d7a10b96a851a9eaeb65071e7469fb07d2"
   integrity sha512-3rS9XsveawNdwwMX6vW+9YAx4wHJuoSZsMbUbCdyr/j0mfOWyA4gNO3BJnus8OtgFPZmA6YxrcBelWc9EEQ33w==
@@ -1259,10 +1259,17 @@
   resolved "https://registry.yarnpkg.com/@types/istanbul-lib-coverage/-/istanbul-lib-coverage-1.1.0.tgz#2cc2ca41051498382b43157c8227fea60363f94a"
   integrity sha512-ohkhb9LehJy+PA40rDtGAji61NCgdtKLAlFoYp4cnuuQEswwdK3vz9SOIkkyc3wrk8dzjphQApNs56yyXLStaQ==
 
-"@types/jest@^23.1.4":
-  version "23.3.14"
-  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-23.3.14.tgz#37daaf78069e7948520474c87b80092ea912520a"
-  integrity sha512-Q5hTcfdudEL2yOmluA1zaSyPbzWPmJ3XfSWeP3RyoYvS9hnje1ZyagrZOuQ6+1nQC1Gw+7gap3pLNL3xL6UBug==
+"@types/jest-diff@*":
+  version "20.0.1"
+  resolved "https://registry.yarnpkg.com/@types/jest-diff/-/jest-diff-20.0.1.tgz#35cc15b9c4f30a18ef21852e255fdb02f6d59b89"
+  integrity sha512-yALhelO3i0hqZwhjtcr6dYyaLoCHbAMshwtj6cGxTvHZAKXHsYGdff6E8EPw3xLKY0ELUTQ69Q1rQiJENnccMA==
+
+"@types/jest@^24.0.11":
+  version "24.0.11"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-24.0.11.tgz#1f099bea332c228ea6505a88159bfa86a5858340"
+  integrity sha512-2kLuPC5FDnWIDvaJBzsGTBQaBbnDweznicvK7UGYzlIJP4RJR2a4A/ByLUXEyEgag6jz8eHdlWExGDtH3EYUXQ==
+  dependencies:
+    "@types/jest-diff" "*"
 
 "@types/minimatch@*":
   version "3.0.3"
@@ -1279,7 +1286,7 @@
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.2.tgz#690a1475b84f2a884fd07cd797c00f5f31356ea8"
   integrity sha512-ce5d3q03Ex0sy4R14722Rmt6MT07Ua+k4FwDfdcToYJcMKNtRVQvJ6JCAPdAmAnbRb6CsX6aYb9m96NGod9uTw==
 
-"@types/storybook__vue@^5.0.0":
+"@types/storybook__vue@5.0.0":
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/@types/storybook__vue/-/storybook__vue-5.0.0.tgz#a201c238b5f3a28c541a8ef658b4b9f1e20b7c0d"
   integrity sha512-ovLBjbFzByb2HWxdZABT4ldtyaN23qfmBgcDWOquskmu0lq3Tftygqm/3dZ+QUIBkAbg5AJw+9OzWPJnALHEsQ==
@@ -1536,7 +1543,7 @@
   resolved "https://registry.yarnpkg.com/@vue/preload-webpack-plugin/-/preload-webpack-plugin-1.1.0.tgz#d768dba004261c029b53a77c5ea2d5f9ee4f3cce"
   integrity sha512-rcn2KhSHESBFMPj5vc5X2pI9bcBNQQixvJXhD5gZ4rN2iym/uH2qfDSQfUS5+qwiz0a85TCkeUs6w6jxFDudbw==
 
-"@vue/test-utils@^1.0.0-beta.29":
+"@vue/test-utils@1.0.0-beta.29":
   version "1.0.0-beta.29"
   resolved "https://registry.yarnpkg.com/@vue/test-utils/-/test-utils-1.0.0-beta.29.tgz#c942cf25e891cf081b6a03332b4ae1ef430726f0"
   integrity sha512-yX4sxEIHh4M9yAbLA/ikpEnGKMNBCnoX98xE1RwxfhQVcn0MaXNSj1Qmac+ZydTj6VBSEVukchBogXBTwc+9iA==
@@ -11593,10 +11600,10 @@ tryer@^1.0.0:
   resolved "https://registry.yarnpkg.com/tryer/-/tryer-1.0.1.tgz#f2c85406800b9b0f74c9f7465b81eaad241252f8"
   integrity sha512-c3zayb8/kWWpycWYg87P71E1S1ZL6b6IJxfb5fvsUgsf0S2MVGaDhDXXjDMpdCpfWXqptc+4mXwmiy1ypXqRAA==
 
-ts-jest@^23.0.0:
-  version "23.10.5"
-  resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-23.10.5.tgz#cdb550df4466a30489bf70ba867615799f388dd5"
-  integrity sha512-MRCs9qnGoyKgFc8adDEntAOP64fWK1vZKnOYU1o2HxaqjdJvGqmkLCPCnVq1/If4zkUmEjKPnCiUisTrlX2p2A==
+ts-jest@^24.0.0:
+  version "24.0.0"
+  resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-24.0.0.tgz#3f26bf2ec1fa584863a5a9c29bd8717d549efbf6"
+  integrity sha512-o8BO3TkMREpAATaFTrXkovMsCpBl2z4NDBoLJuWZcJJj1ijI49UnvDMfVpj+iogn/Jl8Pbhuei5nc/Ti+frEHw==
   dependencies:
     bs-logger "0.x"
     buffer-from "1.x"
@@ -12037,7 +12044,12 @@ vscode-uri@^1.0.6:
   resolved "https://registry.yarnpkg.com/vscode-uri/-/vscode-uri-1.0.6.tgz#6b8f141b0bbc44ad7b07e94f82f168ac7608ad4d"
   integrity sha512-sLI2L0uGov3wKVb9EB+vIQBl9tVP90nqRvxSoJ35vI3NjxE8jfsE5DSOhWgSunHSZmKS4OCi2jrtfxK7uyp2ww==
 
-vue-class-component@7.0.1, vue-class-component@^7.0.1:
+vue-class-component@7.0.2:
+  version "7.0.2"
+  resolved "https://registry.yarnpkg.com/vue-class-component/-/vue-class-component-7.0.2.tgz#c5f35a91c0e9341532392b84d606a84911fb13bc"
+  integrity sha512-8xw/wkZI2tgHcwvkSRC1ax7GeP1CG27wKhedvOAdjdASm05VU4RijGsCYti6s6CzBioBL5BQUmntQQTCsp1wnQ==
+
+vue-class-component@^7.0.1:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/vue-class-component/-/vue-class-component-7.0.1.tgz#7af2225c600667c7042b60712eefdf41dfc6de63"
   integrity sha512-YIihdl7YmceEOjSwcxLhCXCNA3TKC2FStuMcjtuzhUAgw5x5d1T5gZTmVQHGyOaQsaKffL4GlZzYN3dlMYl53w==
