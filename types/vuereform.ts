@@ -1,3 +1,17 @@
+export enum ElementTypes {
+  text = 'text',
+  textarea = 'textarea',
+  checkboxes = 'checkboxes',
+  radios = 'radios',
+  rule = 'rule',
+  date = 'date',
+  time = 'time',
+  select = 'select',
+  header = 'header',
+  section = 'section',
+  group = 'group'
+}
+
 export interface Element {
   name: string
   label: string
@@ -14,36 +28,26 @@ export type TextareaElement<T extends any> = T & {
   value: any
 }
 
-export type FormElement = TextElement<Element> | TextareaElement<Element>
-
-export enum ElementTypes {
-  text = 'text',
-  textarea = 'textarea',
-  checkboxes = 'checkboxes',
-  radios = 'radios',
-  rule = 'rule',
-  date = 'date',
-  time = 'time',
-  select = 'select',
-  header = 'header'
-}
-
-export enum ContainerTypes {
-  section = 'section',
-  group = 'group'
-}
-
-export interface Container {
-  name: string
+export type SectionElement<T extends any> = T & {
   label: string
-  type: ContainerTypes
-  elements: FormElement[]
+  children: Element[]
 }
+
+export type GroupElement<T extends any> = T & {
+  label: string
+  children: Element[]
+}
+
+export type FormElement =
+  | TextElement<Element>
+  | TextareaElement<Element>
+  | SectionElement<Element>
+  | GroupElement<Element>
 
 export interface Form {
   name: string
   label: string
-  containers: Container[]
+  children: Element[]
 }
 
 export interface Renderable {
