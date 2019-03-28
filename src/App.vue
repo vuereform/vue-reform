@@ -1,23 +1,74 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
-    <vue-reform/>
+    <div class="section">
+      <div class="container">
+        <div class="level">
+          <div class="level-item">
+            <div>
+              <vue-reform :form-data="formData" renderer="bulma"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import HelloWorld from './components/HelloWorld.vue'
 import VueReform from './components/VueReform'
 
 @Component({
   components: {
-    HelloWorld,
     VueReform
   }
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+  formData = {
+    name: 'default',
+    label: 'Default',
+    children: [
+      {
+        label: 'Default Section',
+        type: 'section',
+        children: [
+          {
+            label: 'Default Field',
+            name: 'default-field',
+            type: 'text',
+            placeholder: 'Placeholder',
+            value: ''
+          },
+          {
+            label: 'Default Textarea',
+            name: 'default-textarea',
+            type: 'textarea',
+            placeholder: 'Placeholder',
+            value: ''
+          },
+          {
+            label: 'Child section',
+            type: 'section',
+            children: [
+              {
+                label: 'Sub Field',
+                name: 'sub-field',
+                type: 'text',
+                placeholder: 'WHEEEE',
+                value: ''
+              }
+            ]
+          }
+        ]
+      },
+      {
+        label: 'Submit',
+        type: 'button',
+        buttonType: 'submit'
+      }
+    ]
+  }
+}
 </script>
 
 <style lang="scss">
@@ -25,8 +76,10 @@ export default class App extends Vue {}
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+.form {
+  max-width: 400px;
 }
 </style>

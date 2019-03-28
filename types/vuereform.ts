@@ -12,44 +12,52 @@ export enum ElementTypes {
   group = 'group'
 }
 
-export interface Element {
+export type Element<T> = T & {
   name: string
   label: string
   type: ElementTypes
 }
 
-export type TextElement<T extends any> = T & {
+export interface Text {
   placeholder: string
   value: any
 }
 
-export type TextareaElement<T extends any> = T & {
+export interface Textarea {
   placeholder: string
   value: any
 }
 
-export type SectionElement<T extends any> = T & {
+export interface Section {
   label: string
-  children: Element[]
+  children: FormElement[]
 }
 
-export type GroupElement<T extends any> = T & {
+export interface Group {
   label: string
-  children: Element[]
+  children: FormElement[]
+}
+
+export interface Button {
+  label: string
+  buttonType: string
 }
 
 export type FormElement =
-  | TextElement<Element>
-  | TextareaElement<Element>
-  | SectionElement<Element>
-  | GroupElement<Element>
+  | Element<Text>
+  | Element<Textarea>
+  | Element<Section>
+  | Element<Group>
+  | Element<Button>
 
 export interface Form {
   name: string
   label: string
-  children: Element[]
+  children: FormElement[]
 }
 
 export interface Renderable {
-  render(): void
+  render(h: any, formData: Form): void
 }
+
+export type RenderFunction<T> = (child: Element<T>) => JSX.Element
