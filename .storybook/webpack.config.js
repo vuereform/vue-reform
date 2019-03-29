@@ -38,6 +38,14 @@ module.exports = ({ config }) => {
     loaders: ['style-loader', 'css-loader', 'sass-loader']
   })
 
+  config.module.rules.push({
+    test: /\.stories\.tsx?$/,
+    loaders: [
+      require.resolve('@storybook/addon-storysource/loader')
+    ],
+    enforce: 'pre'
+  })
+
   config.plugins.push(new ForkTsCheckerWebpackPlugin())
 
   return config
