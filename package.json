@@ -5,8 +5,7 @@
   "description": "Build and render forms with Vue Reform",
   "author": "Les Harris <les@lesharris.com>",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "serve": "start-storybook",
     "lint": "tslint -p tsconfig.json --fix",
     "test:e2e": "vue-cli-service test:e2e",
     "test:unit": "vue-cli-service test:unit",

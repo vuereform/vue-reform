@@ -1,17 +1,17 @@
 import Vue from 'vue'
-import * as VueReform from '../../../types/vuereform'
+import * as VueReform from '../../types/vuereform'
 
 export default class BootstrapRenderer extends Vue
   implements VueReform.Renderable {
   renderFuncs: {
     [renderFuncLabel: string]: VueReform.RenderFunction
   } = {
-    text: this.renderTextInput.bind(this),
-    textarea: this.renderTextarea.bind(this),
-    section: this.renderSection.bind(this),
-    group: this.renderGroup.bind(this),
-    button: this.renderButton.bind(this)
-  }
+      text: this.renderTextInput.bind(this),
+      textarea: this.renderTextarea.bind(this),
+      section: this.renderSection.bind(this),
+      group: this.renderGroup.bind(this),
+      button: this.renderButton.bind(this)
+    }
 
   h: any
 

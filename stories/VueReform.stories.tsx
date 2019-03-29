@@ -1,9 +1,9 @@
 import { storiesOf } from '@storybook/vue'
 
-import VueReform from '../src/components/VueReform'
-import DefaultRenderer from '../src/components/renderers/DefaultRenderer'
-import BulmaRenderer from '../src/components/renderers/BulmaRenderer'
-import BootstrapRenderer from '../src/components/renderers/BootstrapRenderer'
+import VueReform from '../src/VueReform'
+import DefaultRenderer from '../src/renderers/DefaultRenderer'
+import BulmaRenderer from '../src/renderers/BulmaRenderer'
+import BootstrapRenderer from '../src/renderers/BootstrapRenderer'
 
 const sampleFormData = {
   name: 'default',
