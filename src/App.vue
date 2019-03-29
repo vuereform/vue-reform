@@ -17,7 +17,7 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 import VueReform from './components/VueReform'
-import BulmaRenderer from './components/renderers/BulmaRenderer'
+import BootstrapRenderer from './components/renderers/BootstrapRenderer'
 
 @Component({
   components: {
@@ -25,7 +25,7 @@ import BulmaRenderer from './components/renderers/BulmaRenderer'
   }
 })
 export default class App extends Vue {
-  formRenderer = new BulmaRenderer()
+  formRenderer = new BootstrapRenderer()
   formData = {
     name: 'default',
     label: 'Default',
