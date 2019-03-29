@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
-import VueReform from '@/components/VueReform'
-import DefaultRenderer from '@/components/renderers/DefaultRenderer'
+import VueReform from '@/VueReform'
+import DefaultRenderer from '@/renderers/DefaultRenderer'
 
 describe('VueReform.vue', () => {
   it('is a vue component', () => {

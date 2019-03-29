@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import { Component, Prop } from 'vue-property-decorator'
-import * as VueReform from '../../types/vuereform'
+import * as VueReform from '../types/vuereform'
 
 @Component({
   name: 'VueReform'

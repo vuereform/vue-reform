@@ -1,16 +1,17 @@
 import Vue from 'vue'
-import * as VueReform from '../../../types/vuereform'
+import * as VueReform from '../../types/vuereform'
 
-export default class BulmaRenderer extends Vue implements VueReform.Renderable {
+export default class DefaultRenderer extends Vue
+  implements VueReform.Renderable {
   renderFuncs: {
     [renderFuncLabel: string]: VueReform.RenderFunction
   } = {
-    text: this.renderTextInput.bind(this),
-    textarea: this.renderTextarea.bind(this),
-    section: this.renderSection.bind(this),
-    group: this.renderGroup.bind(this),
-    button: this.renderButton.bind(this)
-  }
+      text: this.renderTextInput.bind(this),
+      textarea: this.renderTextarea.bind(this),
+      section: this.renderSection.bind(this),
+      group: this.renderGroup.bind(this),
+      button: this.renderButton.bind(this)
+    }
 
   h: any
 
@@ -36,47 +37,36 @@ export default class BulmaRenderer extends Vue implements VueReform.Renderable {
 
   renderTextInput(child: VueReform.Element<VueReform.Text>): JSX.Element {
     return (
-      <div class="field">
-        <label class="label">{child.label}</label>
-        <div class="control">
-          <input
-            class="input"
-            type="text"
-            name={child.name}
-            placeholder={child.placeholder}
-          />
-        </div>
+      <div class="form-field">
+        <label class="form-label">{child.label}</label>
+        <input
+          class="form-control"
+          type="text"
+          name={child.name}
+          placeholder={child.placeholder}
+        />
       </div>
     )
   }
 
   renderTextarea(child: VueReform.Element<VueReform.Textarea>): JSX.Element {
     return (
-      <div class="field">
-        <label class="label">{child.label}</label>
-        <div class="control">
-          <textarea
-            class="textarea"
-            name={child.name}
-            placeholder={child.placeholder}
-          />
-        </div>
+      <div class="form-field">
+        <label class="form-label">{child.label}</label>
+        <textarea
+          class="form-control"
+          name={child.name}
+          placeholder={child.placeholder}
+        />
       </div>
     )
   }
 
   renderButton(child: VueReform.Element<VueReform.Button>): JSX.Element {
     return (
-      <div class="field">
-        <div class="control">
-          <button
-            type={child.buttonType}
-            class="button is-link is-pulled-right"
-          >
-            {child.label}
-          </button>
-        </div>
-      </div>
+      <button type={child.buttonType} class="form-button">
+        {child.label}
+      </button>
     )
   }
   renderSection(child: VueReform.Element<VueReform.Section>): JSX.Element {
@@ -87,10 +77,10 @@ export default class BulmaRenderer extends Vue implements VueReform.Renderable {
     }
 
     return (
-      <div class="field" name={child.name}>
-        <div class="subtitle">{child.label}</div>
+      <section class="form-section" name={child.name}>
+        <div class="form-section-label">{child.label}</div>
         {children}
-      </div>
+      </section>
     )
   }
 
@@ -102,7 +92,7 @@ export default class BulmaRenderer extends Vue implements VueReform.Renderable {
     }
 
     return (
-      <div class="field is-grouped" name={child.name}>
+      <div class="form-group" name={child.name}>
         <div class="form-group-label">{child.label}</div>
         {children}
       </div>
