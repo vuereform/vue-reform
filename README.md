@@ -1,4 +1,4 @@
-<h1 align="center"><img src="https://raw.githubusercontent.com/lesharris/vue-reform/master/docs/images/vue-reform-logo-main.png" alt="Vue Reform" width="351" height="161"/></h1>
+<h1 align="center"><img src="https://raw.githubusercontent.com/lesharris/vue-reform/master/docs/images/vue-reform-logo-main.png" alt="Vue Reform" width="350" height="350"/></h1>
 
 <div align="center">
   <strong>Kickass Forms for Vue</strong>
