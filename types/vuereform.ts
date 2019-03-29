@@ -30,12 +30,12 @@ export interface Textarea {
 
 export interface Section {
   label: string
-  children: FormElement[]
+  children: Array<Element<any>>
 }
 
 export interface Group {
   label: string
-  children: FormElement[]
+  children: Array<Element<any>>
 }
 
 export interface Button {
@@ -43,21 +43,14 @@ export interface Button {
   buttonType: string
 }
 
-export type FormElement =
-  | Element<Text>
-  | Element<Textarea>
-  | Element<Section>
-  | Element<Group>
-  | Element<Button>
-
 export interface Form {
   name: string
   label: string
-  children: FormElement[]
+  children: Array<Element<any>>
 }
 
 export interface Renderable {
   render(h: any, formData: Form): void
 }
 
-export type RenderFunction<T> = (child: Element<T>) => JSX.Element
+export type RenderFunction = (child: Element<any>) => JSX.Element

@@ -5,7 +5,7 @@
         <div class="level">
           <div class="level-item">
             <div>
-              <vue-reform :form-data="formData" renderer="bulma"/>
+              <vue-reform :form-data="formData" :renderer="formRenderer"/>
             </div>
           </div>
         </div>
@@ -17,6 +17,7 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 import VueReform from './components/VueReform'
+import BulmaRenderer from './components/renderers/BulmaRenderer'
 
 @Component({
   components: {
@@ -24,6 +25,7 @@ import VueReform from './components/VueReform'
   }
 })
 export default class App extends Vue {
+  formRenderer = new BulmaRenderer()
   formData = {
     name: 'default',
     label: 'Default',

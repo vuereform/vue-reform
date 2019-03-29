@@ -3,7 +3,7 @@ import * as VueReform from '../../../types/vuereform'
 
 export default class BulmaRenderer extends Vue implements VueReform.Renderable {
   renderFuncs: {
-    [renderFuncLabel: string]: VueReform.RenderFunction<any>
+    [renderFuncLabel: string]: VueReform.RenderFunction
   } = {
     text: this.renderTextInput.bind(this),
     textarea: this.renderTextarea.bind(this),

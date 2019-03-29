@@ -4,7 +4,7 @@ import * as VueReform from '../../../types/vuereform'
 export default class DefaultRenderer extends Vue
   implements VueReform.Renderable {
   renderFuncs: {
-    [renderFuncLabel: string]: VueReform.RenderFunction<any>
+    [renderFuncLabel: string]: VueReform.RenderFunction
   } = {
     text: this.renderTextInput.bind(this),
     textarea: this.renderTextarea.bind(this),

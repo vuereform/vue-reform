@@ -2,9 +2,6 @@ import Vue from 'vue'
 import { Component, Prop } from 'vue-property-decorator'
 import * as VueReform from '../../types/vuereform'
 
-import DefaultRenderer from './renderers/DefaultRenderer'
-import BulmaRenderer from './renderers/BulmaRenderer'
-
 @Component({
   name: 'VueReform'
 })
@@ -17,17 +14,13 @@ export default class extends Vue {
   formData!: VueReform.Form
 
   @Prop({
-    default: 'default'
+    required: true
   })
-  renderer!: string
-  private renderers: { [name: string]: VueReform.Renderable } = {
-    default: new DefaultRenderer(),
-    bulma: new BulmaRenderer()
-  }
+  renderer!: VueReform.Renderable | null | undefined
+
   render() {
-    return this.renderers[this.renderer].render(
-      this.$createElement,
-      this.formData
-    )
+    if (this.renderer) {
+      return this.renderer.render(this.$createElement, this.formData)
+    }
   }
 }
