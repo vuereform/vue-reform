@@ -16,8 +16,8 @@
       alt="API stability" />
   </a>
 
-  <a href="https://circleci.com/gh/lesharris/vue-reform">
-    <img src="https://circleci.com/gh/lesharris/vue-reform.svg?style=svg"
+  <a href="https://circleci.com/gh/vuereform/vue-reform">
+    <img src="https://circleci.com/gh/vuereform/vue-reform.svg?style=svg"
       alt="Build Status" />
   </a>
 
